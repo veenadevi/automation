@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuit">
+ <!--  <listeners>
+       <listener class-name="com.trips.helper.RetryListener"/>
+      </listeners> -->
+     
+    
+<test name="SanityTestExecution">
+			
+
+<parameter name="browserType" value="Chrome"></parameter>
+<!--  browser values can be either firefox, ie or Chrome-->
+<parameter name="url" value="http://www.seleniumhq.org"></parameter> 
+
+	<parameter name="seleniumHost" value="localhost" />
+	<parameter name="seleniumPort" value="4444" />
+	<parameter name="isRunOnRemote" value="false" />
+	<parameter name="latestVersion" value="3.4.0" />
+	
+	
+<classes>
+
+<class name="com.codingfreeks.tests.HomePageTest">
+    <methods>
+        
+        <!-- <include name="validate_OrderAssignment_To_Carrier_WithReason"></include> -->
+        <include name="validate_ProductBubble_MouseOver_DispatchArea"></include>
+       
+       
+        
+    </methods>
+    
+</class>
+
+
+</classes>
+
+</test>
+
+</suite>
